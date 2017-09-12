@@ -1,10 +1,14 @@
 import time
 import datetime
+print("grimmer in MeteorClient!!")
 
-from DDPClient import DDPClient
+from lib.ddp.DDPClient import DDPClient
+# use relative imports, not work,  Attempted relative import in non-package
+# from ..ddp.DDPClient import DDPClient
 
 from pyee import EventEmitter
 import hashlib
+
 
 class MeteorClientException(Exception):
     """Custom Exception"""
