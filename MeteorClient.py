@@ -114,7 +114,7 @@ class MeteorClient(EventEmitter):
         #       we need to authenticate
 
         # hash the password
-        hashed = hashlib.sha256(password).hexdigest()
+        hashed = hashlib.sha256(password.encode('utf-8')).hexdigest()
         # handle username or email address
         if '@' in user:
             user_object = {
